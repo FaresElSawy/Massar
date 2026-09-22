@@ -1,0 +1,289 @@
+/* Arabic route overrides. This file is deliberately loaded only after the legacy LTR stylesheet. */
+@import url("https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap");
+html[dir="rtl"] {
+  direction: rtl;
+}
+
+html[dir="rtl"] body,
+html[dir="rtl"] button,
+html[dir="rtl"] input,
+html[dir="rtl"] textarea,
+html[dir="rtl"] select {
+  font-family: "Tajawal", "Segoe UI", Tahoma, sans-serif;
+  text-align: right;
+}
+
+html[dir="rtl"] .ml-auto { margin-left: 0 !important; margin-right: auto !important; }
+html[dir="rtl"] .mr-1 { margin-right: 0 !important; margin-left: .25rem !important; }
+html[dir="rtl"] .pr-2 { padding-right: 0 !important; padding-left: .5rem !important; }
+html[dir="rtl"] .pl-5 { padding-left: 3rem !important; padding-right: 3rem !important; }
+html[dir="rtl"] .pr-5 { padding-right: 3rem !important; }
+
+html[dir="rtl"] .navbar-nav,
+html[dir="rtl"] .modules__btns-list { padding-right: 0; }
+html[dir="rtl"] .navbar-nav .nav__item { margin-right: 0; margin-left: 26px; }
+html[dir="rtl"] .navbar-nav .nav__item:last-child { margin-left: 0; }
+html[dir="rtl"] .navbar-nav .with-dropdown > i { right: auto; left: -12px; }
+html[dir="rtl"] .navbar-nav .dropdown-menu { left: auto; right: 0; text-align: right; }
+html[dir="rtl"] .navbar-nav .dropdown-menu .nav__item-link { padding-left: 15px; padding-right: 24px; }
+html[dir="rtl"] .navbar-modules { margin-left: 0; margin-right: 24px; }
+html[dir="rtl"] .language-switcher { white-space: nowrap; }
+html[dir="rtl"] .language-switcher a { font-weight: 700; }
+
+html[dir="rtl"] .module__search-container { transform: translateX(-100%); }
+html[dir="rtl"] .module__search-container.active { transform: translateX(0); }
+html[dir="rtl"] .module__search-form .search__input { padding-left: 54px; padding-right: 20px; }
+html[dir="rtl"] .module__search-form .module__search-btn { left: 0; right: auto; }
+html[dir="rtl"] .close-search { left: 30px; right: auto; }
+
+html[dir="rtl"] .heading,
+html[dir="rtl"] .hero__content,
+html[dir="rtl"] .slide__content,
+html[dir="rtl"] .pagetitle__heading,
+html[dir="rtl"] .pagetitle__subheading,
+html[dir="rtl"] .footer__widget,
+html[dir="rtl"] .contact-panel,
+html[dir="rtl"] .accordion__item-header { text-align: right; }
+html[dir="rtl"] .btn i,
+html[dir="rtl"] .hero__cta svg { margin-right: 8px; margin-left: 0; transform: scaleX(-1); }
+html[dir="rtl"] .owl-prev { left: auto; right: 0; }
+html[dir="rtl"] .owl-next { right: auto; left: 0; }
+html[dir="rtl"] .slider .carousel-arrows .owl-prev { left: auto; right: 50px; }
+html[dir="rtl"] .slider .carousel-arrows .owl-next { right: auto; left: 50px; }
+
+html[dir="rtl"] .footer__widget-content p,
+html[dir="rtl"] .footer__widget-nav li a,
+html[dir="rtl"] .footer__widget-contact li { text-align: right; }
+html[dir="rtl"] input[type="email"],
+html[dir="rtl"] input[type="tel"],
+html[dir="rtl"] .contact-info__item a { direction: ltr; text-align: right; }
+
+html[dir="rtl"] .page { grid-template-columns: 1fr 270px; }
+html[dir="rtl"] .page > aside { grid-column: 2; }
+html[dir="rtl"] .page main { grid-column: 1; grid-row: 1; }
+html[dir="rtl"] .toolbar,
+html[dir="rtl"] .search-box,
+html[dir="rtl"] .active-filters,
+html[dir="rtl"] .pagination { direction: rtl; }
+html[dir="rtl"] .search-box input { text-align: right; }
+html[dir="rtl"] .cat-head { text-align: right; }
+html[dir="rtl"] .cat-caret { transform: scaleX(-1); }
+html[dir="rtl"] .card-title,
+html[dir="rtl"] .card-tag,
+html[dir="rtl"] .recent-name,
+html[dir="rtl"] .rcard-title,
+html[dir="rtl"] .rcard-tag { direction: ltr; text-align: left; unicode-bidi: isolate; }
+
+html[dir="rtl"] #prodTitle,
+html[dir="rtl"] .spec-table,
+html[dir="rtl"] #specImages { direction: ltr; text-align: left; unicode-bidi: isolate; }
+html[dir="rtl"] #prodDesc { text-align: right; line-height: 2; }
+html[dir="rtl"] .gallery-nav-prev { left: auto; right: 12px; }
+html[dir="rtl"] .gallery-nav-next { right: auto; left: 12px; }
+html[dir="rtl"] .gallery-nav { transform: scaleX(-1); }
+html[dir="rtl"] .back-link { display: inline-block; }
+
+/* Keep the feature-card action arrows aligned despite different Arabic copy lengths. */
+html[dir="rtl"] .features-Layout2 .feature-item .feature__content {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+html[dir="rtl"] .features-Layout2 .feature-item .feature__link {
+  margin-top: auto;
+  padding-top: 10px;
+  line-height: 1;
+}
+
+/* The about-image accent is a brand shape, so retain its English geometry in RTL. */
+html[dir="rtl"] .about-2 .about__img {
+  direction: ltr;
+  text-align: left;
+  padding-left: 35px;
+  padding-right: 0;
+}
+html[dir="rtl"] .about-2 .about__img:after {
+  top: 115px;
+  right: auto;
+  left: 0;
+  width: 35px;
+}
+
+/* Arabic list markers belong at the inline start: to the right, before each title. */
+html[dir="rtl"] .features-list-layout1 .feature-list-item .feature__content {
+  padding-right: 15px;
+  padding-left: 0;
+  text-align: right;
+}
+html[dir="rtl"] .features-list-layout1 .feature-list-item .feature__content:before {
+  right: 0;
+  left: auto;
+}
+
+/* Keep the featured-product carousel controls in the same physical positions as English. */
+html[dir="rtl"] #projectsCarousel3 .projects-carousel-2.carousel-arrows .owl-nav .owl-prev {
+  right: auto !important;
+  left: -60px !important;
+}
+html[dir="rtl"] #projectsCarousel3 .projects-carousel-2.carousel-arrows .owl-nav .owl-next {
+  right: -60px !important;
+  left: auto !important;
+}
+html[dir="rtl"] #projectsCarousel3 .projects-carousel-2.carousel-arrows .owl-nav .owl-prev:before,
+html[dir="rtl"] #projectsCarousel3 .projects-carousel-2.carousel-arrows .owl-nav .owl-next:before {
+  display: inline-block;
+  transform: scaleX(-1);
+}
+
+/* The catalogue icon needs its spacing between the icon and Arabic label. */
+html[dir="rtl"] #projectsCarousel3 .btn__default > i {
+  margin: 0;
+}
+html[dir="rtl"] #projectsCarousel3 .btn__default > i img {
+  margin-right: 0 !important;
+  margin-left: 10px !important;
+  vertical-align: middle;
+}
+
+/* Avoid inheriting the page-wide RTL text alignment in the floating icon button. */
+html[dir="rtl"] #scrollTopBtn {
+  display: grid;
+  place-items: center;
+  text-align: center;
+  line-height: 1;
+}
+html[dir="rtl"] #scrollTopBtn i {
+  margin: 0;
+  line-height: 1;
+}
+
+/* Footer: retain Arabic reading order while preserving readable contact details. */
+html[dir="rtl"] .footer .social__icons {
+  gap: 10px;
+}
+html[dir="rtl"] .footer .social__icons a,
+html[dir="rtl"] .footer .social__icons a:last-of-type {
+  margin: 0;
+}
+html[dir="rtl"] .footer .contact__panel-list li {
+  direction: rtl;
+}
+html[dir="rtl"] .footer .contact__panel-list a {
+  display: inline-block;
+  direction: ltr;
+  unicode-bidi: isolate;
+  text-align: left;
+}
+html[dir="rtl"] .footer .widget__newsletter-form .btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+html[dir="rtl"] .footer .widget__newsletter-form .form-control {
+  padding-right: 120px;
+  padding-left: 15px;
+  text-align: right;
+}
+
+/* Keep the copyright credit in the physical left section, like the English footer. */
+html[dir="rtl"] .footer-bottom .row {
+  direction: ltr;
+}
+html[dir="rtl"] .footer-bottom .footer__copyright-links {
+  direction: ltr;
+  justify-content: flex-start;
+}
+html[dir="rtl"] .footer-bottom .footer__copyright-links li,
+html[dir="rtl"] .footer-bottom .footer__copyright-links li a {
+  direction: rtl;
+  text-align: left;
+}
+
+/* Make the About Us title marks open toward their Arabic headings. */
+html[dir="rtl"] .about__text .title-icon,
+html[dir="rtl"] .about__text2 .title-icon {
+  transform: scaleX(-1);
+}
+
+/* Keep About Us project headings centered while Arabic descriptions read from the right. */
+html[dir="rtl"] .about-us-projects .blog-item .blog__content {
+  padding-right: 30px;
+  padding-left: 30px;
+}
+html[dir="rtl"] .about-us-projects .blog-item .blog__title {
+  text-align: right;
+}
+html[dir="rtl"] .about-us-projects .blog-item .blog__desc {
+  direction: rtl;
+  text-align: right;
+  padding-right: 0;
+  padding-left: 0;
+}
+html[dir="rtl"] .about-us-projects > .container > .row:first-child {
+  direction: ltr;
+}
+html[dir="rtl"] .about-us-projects > .container > .row:first-child .heading {
+  direction: rtl;
+  text-align: center;
+}
+
+/* Preserve page-title compositions that were intentionally centered in English. */
+html[dir="rtl"] .page-title .pagetitle__heading,
+html[dir="rtl"] .page-title .pagetitle__subheading {
+  direction: rtl;
+  text-align: center;
+}
+html[dir="rtl"] .page-title .row {
+  direction: ltr;
+}
+
+/* Mirror the CTA artwork only, retaining Arabic content on the right. */
+html[dir="rtl"] .hero__art {
+  right: auto;
+  left: 40px;
+}
+
+@media (max-width: 991px) {
+  html[dir="rtl"] .navbar-toggler { right: auto; left: 15px; }
+  html[dir="rtl"] .navbar-collapse { text-align: right; }
+  html[dir="rtl"] .navbar-nav .nav__item { margin-left: 0; }
+  html[dir="rtl"] .navbar-nav .with-dropdown > i { left: 20px; right: auto; }
+  html[dir="rtl"] .navbar-nav .dropdown-menu { right: 0; }
+  html[dir="rtl"] .navbar-modules { margin-right: 0; margin-left: 54px; }
+  html[dir="rtl"] .slider .carousel-arrows .owl-prev { right: 10px; }
+  html[dir="rtl"] .slider .carousel-arrows .owl-next { left: 10px; }
+}
+
+@media (max-width: 860px) {
+  html[dir="rtl"] .page { grid-template-columns: 1fr; }
+  html[dir="rtl"] .sidebar,
+  html[dir="rtl"] .page main { grid-column: auto; grid-row: auto; }
+}
+
+@media (max-width: 767px) {
+  html[dir="rtl"] .pl-5,
+  html[dir="rtl"] .pr-5 { padding-inline: 15px !important; }
+  html[dir="rtl"] .toolbar { align-items: stretch; }
+  html[dir="rtl"] .search-box { max-width: none; }
+  html[dir="rtl"] .footer__widget { text-align: right; }
+  html[dir="rtl"] .about-us-projects .blog-item .blog__content { padding-inline: 0; }
+}
+
+@media (max-width: 860px) {
+  html[dir="rtl"] .hero__art {
+    right: auto;
+    left: 20%;
+    transform: translate(-50%, 0);
+  }
+}
+
+@media (max-width: 575px) {
+  /* Match the legacy English in-card arrow offsets on small screens. */
+  html[dir="rtl"] #projectsCarousel3 .projects-carousel-2.carousel-arrows .owl-nav .owl-prev {
+    left: 20px !important;
+  }
+  html[dir="rtl"] #projectsCarousel3 .projects-carousel-2.carousel-arrows .owl-nav .owl-next {
+    right: 20px !important;
+  }
+}
