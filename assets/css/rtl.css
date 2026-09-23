@@ -286,6 +286,12 @@ html[dir="rtl"] .hero__art {
 
 @media (max-width: 991px) {
   html[dir="rtl"] .navbar-toggler { right: auto; left: 15px; }
+  html[dir="rtl"] .header .module__btn-search,
+  html[dir="rtl"] .header-transparent .module__btn-search {
+    left: 55px;
+    right: auto;
+    margin: 0;
+  }
   html[dir="rtl"] .navbar-collapse { text-align: right; }
   html[dir="rtl"] .navbar-nav .nav__item { margin-left: 0; }
   html[dir="rtl"] .navbar-nav .with-dropdown > i { left: 20px; right: auto; }
