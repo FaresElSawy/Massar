@@ -535,6 +535,23 @@
       content: "\203A\00A0";
     }
 
+    /* The RTL desktop sidebar grid must collapse fully on phones, just like English. */
+    @media (max-width: 860px) {
+      html[dir="rtl"] .page {
+        grid-template-columns: minmax(0, 1fr) !important;
+        width: 100%;
+        max-width: 100%;
+      }
+
+      html[dir="rtl"] .page > aside,
+      html[dir="rtl"] .page > main {
+        grid-column: auto !important;
+        grid-row: auto !important;
+        width: 100%;
+        min-width: 0;
+      }
+    }
+
     .results-info {
       font-size: 12.5px;
       color: var(--muted);
