@@ -15,6 +15,25 @@
   <link rel="stylesheet" href="assets/css/libraries.css">
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="stylesheet" href="assets/css/rtl.css">
+  <style>
+    /* Phone numbers retain their international left-to-right order in RTL content. */
+    html[dir="rtl"] .contact__panel-list a[href^="tel:"] {
+      direction: ltr;
+      unicode-bidi: isolate;
+      display: inline-block;
+    }
+
+    html[dir="rtl"] .arabic-inquiry-form .form-control {
+      padding-right: 20px;
+    }
+
+    html[dir="rtl"] .arabic-inquiry-form .btn__block {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+  </style>
 </head>
 
 <body>
@@ -174,7 +193,7 @@
         </div>
         <div class="row">
           <div class="col-sm-12 col-md-12 col-lg-12">
-            <form>
+            <form class="arabic-inquiry-form">
               <div class="row">
                 <div class="col-sm-4 col-md-4 col-lg-4">
                   <div class="form-group"><input type="text" class="form-control" placeholder="الاسم"></div>

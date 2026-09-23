@@ -137,6 +137,7 @@ function getLocalizedDescription(product) {
 function getLocalizedColorName(colorName) {
   return PRODUCT_UI.colors[colorName] || colorName;
 }
+
 function icon(name) {
   return ICONS[name] || ICONS.cap;
 }

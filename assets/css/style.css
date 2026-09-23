@@ -5646,15 +5646,14 @@ textarea.form-control {
 .projects-filter {
   display: flex;
   flex-wrap: wrap;
+  -moz-column-gap: 30px;
+       column-gap: 30px;
+  row-gap: 20px;
+  padding-bottom: 20px;
 }
 
 .projects-filter li {
-  margin-bottom: 20px;
-  margin-right: 30px;
-}
-
-.projects-filter li:last-child {
-  margin-right: 0;
+  margin: 0;
 }
 
 .projects-filter li a {
@@ -6016,15 +6015,17 @@ textarea.form-control {
     left: -40px;
   }
 
-  .projects-filter li {
-    margin-right: 23px;
+  .projects-filter {
+    -moz-column-gap: 23px;
+         column-gap: 23px;
   }
 }
 
 /*  Small Screens and tablets  */
 @media only screen and (min-width: 576px) and (max-width: 767px) {
-  .projects-filter li {
-    margin-right: 20px;
+  .projects-filter {
+    -moz-column-gap: 20px;
+         column-gap: 20px;
   }
 
   .projects-grid .container {
@@ -6129,9 +6130,10 @@ textarea.form-control {
 
 /* Extra Small Devices */
 @media only screen and (min-width: 320px) and (max-width: 575px) {
-  .projects-filter li {
-    margin-right: 15px;
-    margin-bottom: 15px;
+  .projects-filter {
+    -moz-column-gap: 15px;
+         column-gap: 15px;
+    row-gap: 15px;
   }
 
   .projects-filter li a {

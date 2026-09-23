@@ -319,6 +319,14 @@ $(function () {
   $(".projects-filter li a").on("click", function (e) {
     e.preventDefault();
   });
+
+  // Project cards are informational only; their placeholder links have no destination.
+  $(".projects-grid .project__title a, .projects-grid .project__cat a").on(
+    "click",
+    function (e) {
+      e.preventDefault();
+    },
+  );
 });
 
 document.querySelector(".read-more-btn").addEventListener("click", function () {

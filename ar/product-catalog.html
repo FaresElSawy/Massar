@@ -150,7 +150,7 @@
     }
 
     .sub-list li a::before {
-      content: "â€º ";
+      content: "\203A\00A0";
       color: var(--blue);
     }
 
@@ -440,9 +440,13 @@
     }
 
     .pagination button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
       min-width: 36px;
       height: 36px;
       padding: 0 10px;
+      line-height: 1;
       border-radius: 8px;
       border: 1px solid var(--line);
       background: #fff;
@@ -472,6 +476,63 @@
     .pagination .dots {
       padding: 0 4px;
       color: var(--muted);
+    }
+
+    /* Keep the Arabic page-title composition as the RTL mirror of English. */
+    html[dir="rtl"] #pageTitle .row {
+      direction: rtl;
+    }
+
+    html[dir="rtl"] #pageTitle .pagetitle__heading,
+    html[dir="rtl"] #pageTitle .pagetitle__subheading {
+      text-align: right;
+    }
+
+    .catalog-download-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    .catalog-download-btn i {
+      display: inline-flex;
+      margin: 0;
+    }
+
+    html[dir="rtl"] .category-sidebar-block {
+      direction: ltr;
+    }
+
+    html[dir="rtl"] .category-sidebar-block .sidebar-title {
+      direction: rtl;
+      text-align: right;
+    }
+
+    html[dir="rtl"] #categoryList .cat-head {
+      direction: ltr;
+      text-align: left;
+    }
+
+    html[dir="rtl"] #categoryList .cat-item:not(.open) .cat-caret {
+      transform: none;
+    }
+
+    html[dir="rtl"] #categoryList .cat-item.open .cat-caret {
+      transform: rotate(90deg);
+    }
+
+    html[dir="rtl"] #categoryList .sub-list {
+      direction: ltr;
+      margin: 2px 0 8px 22px;
+    }
+
+    html[dir="rtl"] #categoryList .sub-list li a {
+      text-align: left;
+    }
+
+    html[dir="rtl"] #categoryList .sub-list li a::before {
+      content: "\203A\00A0";
     }
 
     .results-info {
@@ -602,9 +663,8 @@
       <div class="container">
         <div class="row">
           <div class="col-sm-12 col-md-12 col-lg-12 col-xl-8">
-            <span class="pagetitle__subheading">Building The Future, Restoring The Past</span>
-            <h1 class="pagetitle__heading">Individually Assess Each Plan &
-              Offer Optimal Solutions!</h1>
+            <span class="pagetitle__subheading">نبني المستقبل ونستعيد الماضي</span>
+            <h1 class="pagetitle__heading">نقيّم كل خطة بشكل منفرد ونقدّم الحلول المثلى!</h1>
             <!-- <nav aria-label="breadcrumb">
               <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="#">Home</a></li>
@@ -624,10 +684,10 @@
 
       <!-- ================= SIDEBAR ================= -->
       <aside>
-        <a href="https://drive.google.com/drive/folders/1MVKGUauvm7WaEyZ0uBuZWzIWJ9QryzvY" target="_blank" class="btn btn__default sidebar-btn w-100 pl-3 pr-3"><i><img style="width: 12px;margin-right: 10px;"
-              src="assets/images/icons/donwload.svg" alt="" srcset=""></i>Download catalogue</a>
+        <a href="https://drive.google.com/drive/folders/1MVKGUauvm7WaEyZ0uBuZWzIWJ9QryzvY" target="_blank" class="btn btn__default sidebar-btn w-100 pl-3 pr-3 catalog-download-btn">تحميل الكتالوج <i><img style="width: 12px;"
+              src="assets/images/icons/donwload.svg" alt=""></i></a>
 
-        <div class="sidebar-block">
+        <div class="sidebar-block category-sidebar-block">
           <h2 class="sidebar-title">الفئات</h2>
           <ul class="cat-list" id="categoryList"></ul>
         </div>
@@ -671,10 +731,10 @@
     <section class="pt-60 pb-60 pb-0-m">
       <div class="container hero">
         <div class="hero__content">
-          <h1 class="hero__title">Building Better Water Networks Starts Here.</h1>
-          <p class="hero__desc">Discover reliable water infrastructure solutions, quality products, and professional project support tailored to your requirements.</p>
-          <a href="contact-us.html" class="hero__cta">
-            Request A Quote
+          <h1 class="hero__title">بناء شبكات مياه أفضل يبدأ من هنا.</h1>
+          <p class="hero__desc">اكتشف حلولاً موثوقة للبنية التحتية للمياه، ومنتجات عالية الجودة، ودعماً احترافياً للمشروعات مصمماً وفق احتياجاتك.</p>
+          <a href="ar/contact-us.html" class="hero__cta">
+            اطلب عرض سعر
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
               stroke-linejoin="round">
               <line x1="5" y1="12" x2="19" y2="12"></line>
@@ -698,13 +758,12 @@
           <div class="row justify-content-between align-items-baseline">
             <div class="col-12 col-sm-12 col-md-12 col-lg-3 footer__widget footer__widget-about">
               <div class="footer__widget-content">
-                <a href="index.html">
+                <a href="ar/index.html">
                   <img src="assets/images/logo/flogo.webp" alt="logo">
                 </a>
                 <div class="footer__widget-content">
-                  <p><i class="fa fa-map-marker pr-2"></i>Building No. 8303, Ayub Bin Warith Street, Off Salah Al-Din
-                    Al-Ayyubi Street, Al-Malaz District,
-                    Riyadh 12841, Saudi Arabia
+                  <p><i class="fa fa-map-marker pr-2"></i>مبنى رقم 8303، شارع أيوب بن وارث، متفرع من شارع صلاح الدين الأيوبي،
+                    حي الملز، الرياض 12841، المملكة العربية السعودية
                   </p>
                 </div>
                 <div class="d-flex align-items-center">
@@ -719,7 +778,7 @@
             </div><!-- /.col-lg-4 -->
             <div class="col-12 col-sm-6 col-md-3 col-lg-2 footer__widget footer__widget-nav">
               <div class="footer__widget-content">
-                <h6 class="footer__widget-title">Contact Details</h6>
+                <h6 class="footer__widget-title">بيانات التواصل</h6>
                 <div class="contact-panel">
                   <ul class="contact__panel-list list-unstyled">
                     <li><i class="fa fa-envelope"></i><span><a href="mailto:info@masaraltaqadom.com">info@masaraltaqadom.com</a></span>
@@ -738,32 +797,32 @@
               </div><!-- /.footer-widget-content -->
             </div><!-- /.col-lg-2 -->
             <div class="col-12 col-sm-6 col-md-3 col-lg-2 footer__widget footer__widget-nav">
-              <h6 class="footer__widget-title">Quick Links</h6>
+              <h6 class="footer__widget-title">روابط سريعة</h6>
               <div class="footer__widget-content">
                 <nav>
                   <ul class="list-unstyled">
-                    <li><a href="about-us.html">About Us</a></li>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="product-catalog.html">Products</a></li>
-                    <li><a href="contact-us.html">Contact Us</a></li>
+                    <li><a href="ar/about-us.html">من نحن</a></li>
+                    <li><a href="ar/services.html">خدماتنا</a></li>
+                    <li><a href="ar/product-catalog.html">المنتجات</a></li>
+                    <li><a href="ar/contact-us.html">اتصل بنا</a></li>
                   </ul>
                 </nav>
               </div><!-- /.footer-widget-content -->
             </div><!-- /.col-lg-2 -->
             <div class="col-12 col-sm-12 col-md-6 col-lg-4 footer__widget footer__widget-newsletter">
               <div class="footer__widget-content">
-                <h6 class="footer__widget-title">Newsletter</h6>
-                <p>Sign up for industry alerts, our latest news, thoughts, and insights from Industic.</p>
+                <h6 class="footer__widget-title">النشرة البريدية</h6>
+                <p>اشترك لتصلك تنبيهات القطاع وأحدث أخبارنا ورؤانا.</p>
                 <form class="widget__newsletter-form">
                   <div class="form-group mb-0">
                     <input type="text" class="form-control" placeholder="بريدك الإلكتروني">
-                    <button type="submit" class="btn btn__primary btn__hover2">Subscribe</button>
+                    <button type="submit" class="btn btn__primary btn__hover2">اشترك</button>
                   </div>
                 </form>
               </div><!-- /.footer-widget-content -->
               <div class="text-right mt-20">
-                <span class="footer__contact-link">Have a question?
-                  <a href="contact-us.html">Click here</a>
+                <span class="footer__contact-link">لديك استفسار؟
+                  <a href="ar/contact-us.html">تواصل معنا</a>
                 </span>
               </div>
             </div><!-- /.col-lg-4 -->
@@ -779,7 +838,7 @@
                   <ul class="list-unstyled footer__copyright-links d-flex flex-wrap">
                     <li>
                       <a href="https://glitci.com/" target="_blank">
-                        &copy; 2026 Masar, Developed by <span class="color-theme">Glitci Software Solutions</span>
+                        &copy; 2026 مسار التقدم، تطوير <span class="color-theme" dir="ltr">Glitci Software Solutions</span>
                       </a>
                     </li>
                     <!-- <li><a href="#">Terms & Conditions </a></li>
@@ -936,13 +995,13 @@
       { id: 3, title: "Polypropylene Compression CAP", tag: "Compression fittings", category: "P.P. Fittings", sub: "Compression fittings", icon: "3" },
       { id: 4, title: "Polypropylene Compression Male Threaded Adaptor", tag: "Compression fittings", category: "P.P. Fittings", sub: "Compression fittings", icon: "4" },
       { id: 5, title: "Polypropylene Compression Female Threaded Adaptor", tag: "Compression fittings", category: "P.P. Fittings", sub: "Compression fittings", icon: "5" },
-      { id: 6, title: "Polypropylene Compression 90Â° Elbow", tag: "Compression fittings", category: "P.P. Fittings", sub: "Compression fittings", icon: "6" },
+      { id: 6, title: "Polypropylene Compression 90° Elbow", tag: "Compression fittings", category: "P.P. Fittings", sub: "Compression fittings", icon: "6" },
       { id: 7, title: "Polypropylene Compression Male Thread Elbow", tag: "Compression fittings", category: "P.P. Fittings", sub: "Compression fittings", icon: "7" },
       { id: 8, title: "Polypropylene Compression Female Threaded Elbow", tag: "Compression fittings", category: "P.P. Fittings", sub: "Compression fittings", icon: "8" },
-      { id: 9, title: "Polypropylene Compression 90Â° Male Threaded Tee", tag: "Compression fittings", category: "P.P. Fittings", sub: "Compression fittings", icon: "9" },
-      { id: 10, title: "Polypropylene Compression 90Â° Female Threaded Tee", tag: "Compression fittings", category: "P.P. Fittings", sub: "Compression fittings", icon: "10" },
-      { id: 11, title: "Polypropylene Compression 90Â° Equal Tee", tag: "Compression fittings", category: "P.P. Fittings", sub: "Compression fittings", icon: "11" },
-      { id: 12, title: "Polypropylene Compression 90Â° Reducer Threaded Tee", tag: "Compression fittings", category: "P.P. Fittings", sub: "Compression fittings", icon: "12" },
+      { id: 9, title: "Polypropylene Compression 90° Male Threaded Tee", tag: "Compression fittings", category: "P.P. Fittings", sub: "Compression fittings", icon: "9" },
+      { id: 10, title: "Polypropylene Compression 90° Female Threaded Tee", tag: "Compression fittings", category: "P.P. Fittings", sub: "Compression fittings", icon: "10" },
+      { id: 11, title: "Polypropylene Compression 90° Equal Tee", tag: "Compression fittings", category: "P.P. Fittings", sub: "Compression fittings", icon: "11" },
+      { id: 12, title: "Polypropylene Compression 90° Reducer Threaded Tee", tag: "Compression fittings", category: "P.P. Fittings", sub: "Compression fittings", icon: "12" },
       // PP Clamp Saddle
       { id: 13, title: "Polypropylene Clamp Saddle One Hole", tag: "Clamp Saddle", category: "P.P. Fittings", sub: "Clamp Saddle", icon: "13" },
       { id: 14, title: "Polypropylene Clamp Saddle Two Holes", tag: "Clamp Saddle", category: "P.P. Fittings", sub: "Clamp Saddle", icon: "14" },
@@ -1080,14 +1139,14 @@
     function renderCategories() {
       categoryListEl.innerHTML = `
     <li class="cat-item cat-item-all">
-      <button class="cat-head cat-all" data-cat="__all__">
-          <span class="cat-caret" style="visibility:hidden">â–¶</span>جميع المنتجات
+      <button class="cat-head cat-all" data-cat="__all__" data-no-translate>
+          <span class="cat-caret" style="visibility:hidden">&#9654;</span>All Products
       </button>
     </li>
   ` + CATEGORIES.map((cat, i) => `
     <li class="cat-item" data-index="${i}">
       <button class="cat-head" data-cat="${cat.name}">
-        <span class="cat-caret">â–¶</span>${cat.name}
+        <span class="cat-caret">&#9654;</span>${cat.name}
       </button>
       <ul class="sub-list">
         ${cat.subs.map(s => `<li><a href="#" data-cat="${cat.name}" data-sub="${s}">${s}</a></li>`).join('')}
@@ -1227,7 +1286,7 @@
       if (state.query) chips.push({ label: `"${state.query}"`, clear: () => { state.query = ""; searchInput.value = ""; } });
 
       activeFiltersEl.innerHTML = chips.map((c, i) => `
-    <span class="chip" data-i="${i}">${c.label}<button aria-label="Remove filter">Ã—</button></span>
+    <span class="chip" data-i="${i}">${c.label}<button aria-label="Remove filter">&times;</button></span>
   `).join('');
 
       activeFiltersEl.querySelectorAll('.chip button').forEach((btn, i) => {
@@ -1268,7 +1327,7 @@
       const pageItems = items.slice(start, start + state.perPage);
 
       gridEl.innerHTML = pageItems.map(p => `
-    <a class="card" href="product-detail.html?id=${p.id}">
+    <a class="card" href="ar/product-detail.html?id=${p.id}">
       <div class="card-media">
         ${icon(p.icon)}
           <div class="card-overlay"><span>تفاصيل المنتج</span></div>
@@ -1280,7 +1339,7 @@
     </a>
   `).join('');
 
-      resultsInfoEl.textContent = `عرض ${start + 1}â€“${Math.min(start + pageItems.length, items.length)} من ${items.length} منتج`;
+      resultsInfoEl.textContent = `عرض ${start + 1}–${Math.min(start + pageItems.length, items.length)} من أصل ${items.length} منتجًا`;
 
       renderPagination(totalPages);
     }
@@ -1288,7 +1347,7 @@
     function renderPagination(totalPages) {
       if (totalPages <= 1) { paginationEl.innerHTML = ""; return; }
 
-      let html = `<button data-page="prev" ${state.page === 1 ? 'disabled' : ''}>â€¹</button>`;
+      let html = `<button data-page="prev" ${state.page === 1 ? 'disabled' : ''}>&lsaquo;</button>`;
 
       const pages = [];
       for (let i = 1; i <= totalPages; i++) {
@@ -1297,11 +1356,11 @@
       }
 
       pages.forEach(p => {
-        if (p === '...') html += `<span class="dots">â€¦</span>`;
+        if (p === '...') html += `<span class="dots">&hellip;</span>`;
         else html += `<button data-page="${p}" class="${p === state.page ? 'active' : ''}">${p}</button>`;
       });
 
-      html += `<button data-page="next" ${state.page === totalPages ? 'disabled' : ''}>â€º</button>`;
+      html += `<button data-page="next" ${state.page === totalPages ? 'disabled' : ''}>&rsaquo;</button>`;
       paginationEl.innerHTML = html;
     }
 

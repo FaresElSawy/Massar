@@ -74,13 +74,28 @@ html[dir="rtl"] .recent-name,
 html[dir="rtl"] .rcard-title,
 html[dir="rtl"] .rcard-tag { direction: ltr; text-align: left; unicode-bidi: isolate; }
 
-html[dir="rtl"] #prodTitle,
+html[dir="rtl"] #prodTitle { direction: ltr; text-align: right !important; unicode-bidi: isolate; }
 html[dir="rtl"] .spec-table,
 html[dir="rtl"] #specImages { direction: ltr; text-align: left; unicode-bidi: isolate; }
 html[dir="rtl"] #prodDesc { text-align: right; line-height: 2; }
-html[dir="rtl"] .gallery-nav-prev { left: auto; right: 12px; }
-html[dir="rtl"] .gallery-nav-next { right: auto; left: 12px; }
-html[dir="rtl"] .gallery-nav { transform: scaleX(-1); }
+/* Product-gallery controls retain the same edge placement as the English slider. */
+html[dir="rtl"] .gallery-nav-prev {
+  left: 0;
+  right: auto;
+  direction: ltr;
+  justify-content: flex-start;
+  padding-left: 10px;
+  padding-right: 0;
+}
+html[dir="rtl"] .gallery-nav-next {
+  right: 0;
+  left: auto;
+  direction: ltr;
+  justify-content: flex-end;
+  padding-right: 10px;
+  padding-left: 0;
+}
+html[dir="rtl"] .gallery-nav { transform: none; }
 html[dir="rtl"] .back-link { display: inline-block; }
 
 /* Keep the feature-card action arrows aligned despite different Arabic copy lengths. */
@@ -236,6 +251,31 @@ html[dir="rtl"] .page-title .pagetitle__subheading {
 }
 html[dir="rtl"] .page-title .row {
   direction: ltr;
+}
+
+/* Product-detail hero mirrors the English layout: its content column begins at the right. */
+html[dir="rtl"] #pageTitle.page-title-layout7 .row {
+  direction: rtl;
+}
+html[dir="rtl"] #pageTitle.page-title-layout7 .pagetitle__heading,
+html[dir="rtl"] #pageTitle.page-title-layout7 .pagetitle__subheading {
+  direction: rtl;
+  text-align: right !important;
+}
+
+/* Standard inner-page banners (about, certificates, services, contact, and projects) stay centered. */
+html[dir="rtl"] .page-title-layout4 .row {
+  direction: ltr;
+  justify-content: center;
+}
+html[dir="rtl"] .page-title-layout4 .col-lg-8 {
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+html[dir="rtl"] .page-title-layout4 .pagetitle__heading,
+html[dir="rtl"] .page-title-layout4 .pagetitle__subheading {
+  direction: rtl;
+  text-align: center !important;
 }
 
 /* Mirror the CTA artwork only, retaining Arabic content on the right. */

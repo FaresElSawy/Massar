@@ -48,7 +48,7 @@
     const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, {
       acceptNode(node) {
         const parent = node.parentElement;
-        return parent && !parent.closest("script, style, noscript, table, .spec-table")
+        return parent && !parent.closest("script, style, noscript, table, .spec-table, [data-no-translate]")
           ? NodeFilter.FILTER_ACCEPT
           : NodeFilter.FILTER_REJECT;
       }

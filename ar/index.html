@@ -8,13 +8,24 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <meta name="description" content="مسار التقدم للتجارة - حلول موثوقة لأنظمة المياه والبنية التحتية">
   <link href="assets/images/logo/flogo.webp" rel="icon">
-  <title>مسار التقدم | حلول أنظمة المياه</title>
+  <title>مسار التقدم</title>
   <link rel="stylesheet"
     href="https://fonts.googleapis.com/css?family=Roboto:400,500,700%7cRubik:400,500,700&display=swap">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap">
   <link rel="stylesheet" href="assets/css/libraries.css">
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="stylesheet" href="assets/css/rtl.css">
+  <style>
+    /* Align the featured-products accent with the RTL start of its heading. */
+    html[dir="rtl"] .featured-products-heading .divider__line:after {
+      left: auto;
+      right: 0;
+    }
+
+    html[dir="rtl"] #blogGrid .featured-brands-copy .blog__desc {
+      text-align: right;
+    }
+  </style>
 </head>
 
 <body>
@@ -565,7 +576,7 @@
         <div class="row">
           <div
             class="col-sm-12 col-md-12 col-lg-12 d-flex justify-content-between flex-column flex-sm-row flex-md-row flex-lg-row flex-xl-row pb-3-m">
-            <div class="heading mb-50">
+            <div class="heading mb-50 featured-products-heading">
               <!-- <span class="heading__subtitle">Explore Recent Works</span> -->
               <h2 class="heading__title">المنتجات المميزة</h2>
               <div class="divider__line divider__theme"></div>
@@ -681,7 +692,7 @@
     <section id="blogGrid" class="blog blog-grid pt-120 pb-70">
       <div class="container">
         <div class="row">
-          <div class="col-sm-12 col-md-12 col-lg-6 offset-lg-3">
+          <div class="col-sm-12 col-md-12 col-lg-6 offset-lg-3 mx-auto">
             <div class="heading text-center mb-50">
               <span class="heading__subtitle">علاماتنا التجارية</span>
               <h2 class="heading__title">العلامات التجارية المميزة</h2>
@@ -695,7 +706,7 @@
           <!-- Blog Item #1 -->
           <div class="col-sm-12 col-md-6 col-lg-6">
             <div class="blog-item">
-              <div class="blog__content p-0">
+              <div class="blog__content p-0 featured-brands-copy">
                 <h4 class="blog__title color-theme">علامات تجارية موثوقة لحلول البنية التحتية للمياه</h4>
                 <p class="blog__desc">توفّر مسار مجموعة مختارة من العلامات التجارية الموثوقة، المعروفة بجودتها ومتانتها وأدائها الموثوق في حلول البنية التحتية للمياه وأنظمة التوصيل.</p>
               </div><!-- /.entry-content -->
