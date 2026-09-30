@@ -47,37 +47,131 @@ $(function () {
 
     if (!filename || !/\.html$/i.test(filename)) filename = "index.html";
 
-    var href =
-      (isArabic ? "../" : "ar/") +
-      filename +
-      window.location.search +
-      window.location.hash;
-    var label = isArabic ? "English" : "العربية";
+    var suffix = window.location.search + window.location.hash;
+    var languageLinks = {
+      en: (isArabic ? "../" : "") + filename + suffix,
+      ar: "ar/" + filename + suffix
+    };
+    var labels = isArabic
+      ? { trigger: "اللغة", en: "الإنجليزية", ar: "العربية" }
+      : { trigger: "Language", en: "English", ar: "Arabic" };
     var targetLanguage = isArabic ? "en" : "ar";
 
-    function createSwitcher(className) {
+    function createDesktopSwitcher() {
       var item = document.createElement("li");
-      item.className = "nav__item language-switcher " + className;
+      item.className = "nav__item with-dropdown language-switcher language-switcher--desktop d-none d-lg-block";
 
-      var link = document.createElement("a");
-      link.className = "nav__item-link language-switcher__link";
-      link.href = href;
-      link.lang = targetLanguage;
-      link.hreflang = targetLanguage;
-      link.textContent = label;
+      var toggle = document.createElement("button");
+      toggle.className = "language-switcher__toggle";
+      toggle.type = "button";
+      toggle.setAttribute("aria-haspopup", "true");
+      toggle.setAttribute("aria-expanded", "false");
+      toggle.innerHTML = '<span class="language-switcher__label">' + labels.trigger + '</span><i class="fa fa-angle-down" aria-hidden="true"></i>';
 
-      item.appendChild(link);
+      var menu = document.createElement("ul");
+      menu.className = "dropdown-menu language-switcher__menu list-unstyled";
+      menu.setAttribute("role", "menu");
+
+      ["en", "ar"].forEach(function (language) {
+        var menuItem = document.createElement("li");
+        menuItem.className = "nav__item";
+        var link = document.createElement("a");
+        link.className = "nav__item-link";
+        link.href = languageLinks[language];
+        link.lang = language;
+        link.hreflang = language;
+        link.textContent = labels[language];
+        link.setAttribute("role", "menuitem");
+        if ((isArabic && language === "ar") || (!isArabic && language === "en")) {
+          link.setAttribute("aria-current", "page");
+        }
+        menuItem.appendChild(link);
+        menu.appendChild(menuItem);
+      });
+
+      toggle.addEventListener("click", function () {
+        var isOpen = item.classList.toggle("language-switcher--open");
+        toggle.setAttribute("aria-expanded", String(isOpen));
+      });
+
+      toggle.addEventListener("keydown", function (event) {
+        if (event.key === "Escape") {
+          item.classList.remove("language-switcher--open");
+          toggle.setAttribute("aria-expanded", "false");
+        }
+      });
+
+      document.addEventListener("click", function (event) {
+        if (!item.contains(event.target)) {
+          item.classList.remove("language-switcher--open");
+          toggle.setAttribute("aria-expanded", "false");
+        }
+      });
+
+      item.appendChild(toggle);
+      item.appendChild(menu);
+      return item;
+    }
+
+    function createMobileHeaderSwitcher() {
+      var item = document.createElement("div");
+      item.className = "language-switcher language-switcher--mobile-header d-lg-none";
+
+      var toggle = document.createElement("button");
+      toggle.className = "module__btn language-switcher__toggle";
+      toggle.type = "button";
+      toggle.setAttribute("aria-haspopup", "true");
+      toggle.setAttribute("aria-expanded", "false");
+      toggle.innerHTML = '<span class="language-switcher__label">' + (isArabic ? "اللغة" : "Lang") + '</span><i class="fa fa-angle-down" aria-hidden="true"></i>';
+
+      var menu = document.createElement("ul");
+      menu.className = "dropdown-menu language-switcher__menu list-unstyled";
+      menu.setAttribute("role", "menu");
+
+      ["en", "ar"].forEach(function (language) {
+        var menuItem = document.createElement("li");
+        menuItem.className = "nav__item";
+        var link = document.createElement("a");
+        link.className = "nav__item-link";
+        link.href = languageLinks[language];
+        link.lang = language;
+        link.hreflang = language;
+        link.textContent = labels[language];
+        link.setAttribute("role", "menuitem");
+        if ((isArabic && language === "ar") || (!isArabic && language === "en")) {
+          link.setAttribute("aria-current", "page");
+        }
+        menuItem.appendChild(link);
+        menu.appendChild(menuItem);
+      });
+
+      toggle.addEventListener("click", function () {
+        var isOpen = item.classList.toggle("language-switcher--open");
+        toggle.setAttribute("aria-expanded", String(isOpen));
+      });
+
+      document.addEventListener("click", function (event) {
+        if (!item.contains(event.target)) {
+          item.classList.remove("language-switcher--open");
+          toggle.setAttribute("aria-expanded", "false");
+        }
+      });
+
+      item.appendChild(toggle);
+      item.appendChild(menu);
       return item;
     }
 
     var desktopList = document.querySelector(".modules__btns-list");
     if (desktopList) {
-      desktopList.appendChild(createSwitcher("d-none d-lg-block"));
+      desktopList.appendChild(createDesktopSwitcher());
     }
 
-    var mobileList = document.querySelector("#mainNavigation .navbar-nav");
-    if (mobileList) {
-      mobileList.appendChild(createSwitcher("d-lg-none language-switcher--mobile"));
+    var mobileSearch = document.querySelector(
+      ".navbar > .container-fluid > .module__btn-search.d-lg-none"
+    );
+    if (mobileSearch) {
+      mobileSearch.parentNode.insertBefore(createMobileHeaderSwitcher(), mobileSearch);
     }
   }
 

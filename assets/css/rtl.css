@@ -144,6 +144,13 @@ html[dir="rtl"] .language-switcher a {
   font-weight: 700;
 }
 
+html[dir="rtl"] .language-switcher__menu { text-align: right; }
+
+@media (max-width: 991px) {
+  html[dir="rtl"] .language-switcher--mobile-header { left: 104px; right: auto; }
+  html[dir="rtl"] .navbar .language-switcher--mobile-header > .dropdown-menu { left: 0; right: auto; }
+}
+
 html[dir="rtl"] .module__search-container {
   transform: translateX(-100%);
 }
