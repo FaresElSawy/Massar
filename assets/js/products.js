@@ -1900,9 +1900,9 @@ colors: [
   {
     id: 26,
     title: "DIN3352-F4 Non-rising stem Resilient Gate Valve (brass Nut Type)",
-    tag: "Fittings",
+    tag: "Valves Fittings",
     category: "Ductile valves & Fittings",
-    sub: "Fittings",
+    sub: "Valves Fittings",
     icon: "26",
     images: [
       "assets/images/new products/DIN3352-F4 Non-rising stem Resilient Gate Valve (brass Nut Type)/1.png",
@@ -2079,9 +2079,9 @@ colors: [
   {
     id: 27,
     title: "DIN3352-F5 Non-rising stem Resilient Gate Valve (brass Nut Type)",
-    tag: "Fittings",
+    tag: "Valves Fittings",
     category: "Ductile valves & Fittings",
-    sub: "Fittings",
+    sub: "Valves Fittings",
     icon: "27",
     images: [
       "assets/images/new products/DIN3352-F5 Non-rising stem Resilient Gate Valve (brass Nut Type)/1.png",
@@ -2171,9 +2171,9 @@ colors: [
   {
     id: 28,
     title: "BS5163 Type a Non-rising Stem Resilient Seated Gate Valve",
-    tag: "Fittings",
+    tag: "Valves Fittings",
     category: "Ductile valves & Fittings",
-    sub: "Fittings",
+    sub: "Valves Fittings",
     icon: "28",
     images: [
       "assets/images/new products/BS5163 Type a Non-rising Stem Resilient Seated Gate Valve/1.png",
@@ -2415,9 +2415,9 @@ colors: [
   {
     id: 29,
     title: "BS5163 rising Stem Resilient Seated Gate Valve",
-    tag: "Fittings",
+    tag: "Valves Fittings",
     category: "Ductile valves & Fittings",
-    sub: "Fittings",
+    sub: "Valves Fittings",
     icon: "29",
     images: [
       "assets/images/new products/BS5163 rising Stem Resilient Seated Gate Valve/1.png",
@@ -2508,9 +2508,9 @@ colors: [
     id: 30,
     title:
       "Socket End Non-rising Stem Resilient Seated Gate Valve For PVC Pipe",
-    tag: "Fittings",
+    tag: "Valves Fittings",
     category: "Ductile valves & Fittings",
-    sub: "Fittings",
+    sub: "Valves Fittings",
     icon: "30",
     images: [
       "assets/images/new products/Socket End Non-rising Stem Resilient Seated Gate Valve For PVC Pipe/1.png",
@@ -2568,9 +2568,9 @@ colors: [
     id: 31,
     title:
       "Socket End Non-rising Stem Resilient Seated Gate Valve For Ductile Iron Pipe",
-    tag: "Fittings",
+    tag: "Valves Fittings",
     category: "Ductile valves & Fittings",
-    sub: "Fittings",
+    sub: "Valves Fittings",
     icon: "31",
     images: [
       "assets/images/new products/Socket End Non-rising Stem Resilient Seated Gate Valve For Ductile Iron Pipe/1.png",
@@ -2623,9 +2623,9 @@ colors: [
   {
     id: 32,
     title: "Flanged Double Eccentric Butterfly Valve",
-    tag: "Fittings",
+    tag: "Valves Fittings",
     category: "Ductile valves & Fittings",
-    sub: "Fittings",
+    sub: "Valves Fittings",
     icon: "32",
     images: [
       "assets/images/new products/Flanged Double Eccentric Butterfly Valve/1.png",
@@ -2727,9 +2727,9 @@ colors: [
   {
     id: 33,
     title: "Double Balls Exhaust Valve",
-    tag: "Fittings",
+    tag: "Valves Fittings",
     category: "Ductile valves & Fittings",
-    sub: "Fittings",
+    sub: "Valves Fittings",
     icon: "33",
     images: [
       "assets/images/new products/Double Balls Exhaust Valve/1.png",
@@ -2773,9 +2773,9 @@ colors: [
   {
     id: 34,
     title: "Quick Exhaust Valve",
-    tag: "Fittings",
+    tag: "Valves Fittings",
     category: "Ductile valves & Fittings",
-    sub: "Fittings",
+    sub: "Valves Fittings",
     icon: "34",
     images: [
       "assets/images/new products/Quick Exhaust Valve/1.png",
@@ -2821,9 +2821,9 @@ colors: [
   {
     id: 35,
     title: "Swing Type Check Valve Rubber Disc",
-    tag: "Fittings",
+    tag: "Valves Fittings",
     category: "Ductile valves & Fittings",
-    sub: "Fittings",
+    sub: "Valves Fittings",
     icon: "35",
     images: [
       "assets/images/new products/Swing Type Check Valve Rubber Disc/1.png",
@@ -2880,9 +2880,9 @@ colors: [
   {
     id: 36,
     title: "Y- Stariner",
-    tag: "Fittings",
+    tag: "Valves Fittings",
     category: "Ductile valves & Fittings",
-    sub: "Fittings",
+    sub: "Valves Fittings",
     icon: "36",
     images: [
       "assets/images/new products/Y- Stariner/1.png",
@@ -2931,9 +2931,9 @@ colors: [
   {
     id: 37,
     title: "100X Solenoid Distance Control Ball Float Valve",
-    tag: "Fittings",
+    tag: "Valves Fittings",
     category: "Ductile valves & Fittings",
-    sub: "Fittings",
+    sub: "Valves Fittings",
     icon: "37",
     images: [
       "assets/images/new products/100X Solenoid Distance Control Ball Float Valve/1.png",
@@ -2989,9 +2989,9 @@ colors: [
   {
     id: 38,
     title: "800X Differential Bypass Balance Valves",
-    tag: "Fittings",
+    tag: "Valves Fittings",
     category: "Ductile valves & Fittings",
-    sub: "Fittings",
+    sub: "Valves Fittings",
     icon: "38",
     images: [
       "assets/images/new products/800X Differential Bypass Balance Valves/1.png",
@@ -3078,9 +3078,9 @@ colors: [
   {
     id: 39,
     title: "Universal Coupling (Wide range)",
-    tag: "Fittings",
+    tag: "Valves Fittings",
     category: "Ductile valves & Fittings",
-    sub: "Fittings",
+    sub: "Valves Fittings",
     icon: "39",
     images: [
       "assets/images/new products/Universal Coupling (Wide range)/1.png",
@@ -3148,9 +3148,9 @@ colors: [
   {
     id: 40,
     title: "Universal Flange Adaptor (Wide range)",
-    tag: "Fittings",
+    tag: "Valves Fittings",
     category: "Ductile valves & Fittings",
-    sub: "Fittings",
+    sub: "Valves Fittings",
     icon: "40",
     images: [
       "assets/images/new products/Universal Flange Adaptor (Wide range)/1.png",
@@ -3218,9 +3218,9 @@ colors: [
   {
     id: 41,
     title: "Dismantling Joint Class PN16-PN25",
-    tag: "Fittings",
+    tag: "Valves Fittings",
     category: "Ductile valves & Fittings",
-    sub: "Fittings",
+    sub: "Valves Fittings",
     icon: "41",
     images: [
       "assets/images/new products/Dismantling Joint Class PN16-PN25/1.png",
@@ -3261,9 +3261,9 @@ colors: [
   {
     id: 42,
     title: "Dismantling Joint Class PN40",
-    tag: "Fittings",
+    tag: "Valves Fittings",
     category: "Ductile valves & Fittings",
-    sub: "Fittings",
+    sub: "Valves Fittings",
     icon: "42",
     images: [
       "assets/images/new products/Dismantling Joint Class PN40/1.png",
@@ -3304,9 +3304,9 @@ colors: [
   {
     id: 43,
     title: "Ductile iron saddle for PVC PE Pipe",
-    tag: "Fittings",
+    tag: "Valves Fittings",
     category: "Ductile valves & Fittings",
-    sub: "Fittings",
+    sub: "Valves Fittings",
     icon: "43",
     images: [
       "assets/images/new products/Ductile iron saddle for PVC PE Pipe/1.png",
@@ -3374,9 +3374,9 @@ colors: [
   {
     id: 44,
     title: "Universal saddle with outlet thread PVC PE Pipe",
-    tag: "Fittings",
+    tag: "Valves Fittings",
     category: "Ductile valves & Fittings",
-    sub: "Fittings",
+    sub: "Valves Fittings",
     icon: "44",
     images: [
       "assets/images/new products/Universal saddle with outlet thread PVC PE Pipe/1.png",
@@ -3419,9 +3419,9 @@ colors: [
   {
     id: 45,
     title: "saddle Clamp for Ductile iron Pipes",
-    tag: "Fittings",
+    tag: "Valves Fittings",
     category: "Ductile valves & Fittings",
-    sub: "Fittings",
+    sub: "Valves Fittings",
     icon: "45",
     images: [
       "assets/images/new products/saddle Clamp for Ductile iron Pipes/1.png",
@@ -3492,9 +3492,9 @@ colors: [
   {
     id: 46,
     title: "Restrained flange adaptor for HDPE/PVC Pipes",
-    tag: "Fittings",
+    tag: "Valves Fittings",
     category: "Ductile valves & Fittings",
-    sub: "Fittings",
+    sub: "Valves Fittings",
     icon: "46",
     images: [
       "assets/images/new products/Restrained flange adaptor for HDPE PVC Pipes/1.png",
@@ -3584,9 +3584,9 @@ colors: [
   {
     id: 47,
     title: "Coupling",
-    tag: "Fittings",
+    tag: "Valves Fittings",
     category: "Ductile valves & Fittings",
-    sub: "Fittings",
+    sub: "Valves Fittings",
     icon: "47",
     images: [
       "assets/images/new products/Coupling/1.png",
@@ -3616,9 +3616,9 @@ colors: [
   {
     id: 48,
     title: "Tensile Resistant Flange Adaptors for HDPE/PVC Pipes",
-    tag: "Fittings",
+    tag: "Valves Fittings",
     category: "Ductile valves & Fittings",
-    sub: "Fittings",
+    sub: "Valves Fittings",
     icon: "48",
     images: [
       "assets/images/new products/Tensile Resistant Flange Adaptors for HDPE PVC Pipes/1.png",
@@ -3668,9 +3668,9 @@ colors: [
   {
     id: 49,
     title: "Flexible Rubber Joint (Single Sphere)",
-    tag: "Fittings",
+    tag: "Valves Fittings",
     category: "Ductile valves & Fittings",
-    sub: "Fittings",
+    sub: "Valves Fittings",
     icon: "49",
     images: [
       "assets/images/new products/Flexible Rubber Joint (Single Sphere)/1.png",
